@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--font awsome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div id="inner-wrapper">
+        <!-- Navigation-->
+        <div class="header">
+            <div class="wrapper">
+                <div class="brand">
+                    <a href="/about"><img style="height: 40px;" src="/logo.png" alt="logo"></a>
+                </div>
+                <nav class="navigation-items">
+                    <div class="wrapper">
+                        <ul classs="main-navigation navigation-top-header"></ul>
+                        <ul>
+                            <li><a href="/index">방 검색　</a></li>
+                            <li><a href="/index">로그인　</a></li>
+                            <%# if user_signed_in? %>
+                                <li><a href="/">로그아웃　</a></li>
+                                <li><a href="/">방 등록　</a></li>
+                                <li><a href="/like">찜 목록　</a></li>
+                                <li><a href="/mypage">마이페이지　</a></li>
+                            <%# end %>
+                         </ul>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- end Navigation-->
+  <title>하숙을 잇다 'Ha-it'</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
